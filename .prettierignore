@@ -1,0 +1,12 @@
+node_modules/
+.idea/
+.prettierignore
+package-lock.json
+Note/
+client/node_modules/
+client/package-lock.json
+client/README.md
+client/tslint.json
+client/tsconfig.spec.json
+client/tsconfig.json
+client/tsconfig.app.json
