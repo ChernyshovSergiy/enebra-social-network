@@ -28,11 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "src/assets/css/jquery-ui.css",
-              "src/assets/css/bootstrap.css",
-              "src/assets/css/font-awesome.min.css",
-              "src/assets/css/style.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },

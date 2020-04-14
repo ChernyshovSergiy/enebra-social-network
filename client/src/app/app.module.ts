@@ -2,17 +2,34 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { RegisterComponent } from './register/register.component';
-import { ProfileComponent } from './profile/profile.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { AppComponent } from './app.component';
+
+import { RegisterComponent } from './views/register/register.component';
+import { ProfileComponent } from './views/profile/profile.component';
+import { LoginComponent } from './views/login/login.component';
+import { HomeComponent } from './views/home/home.component';
+import { ReferencesComponent } from './views/references/references.component';
 
 @NgModule({
-    declarations: [AppComponent, RegisterComponent, ProfileComponent, LoginComponent, HomeComponent],
-    imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+    declarations: [
+        AppComponent,
+        RegisterComponent,
+        ProfileComponent,
+        LoginComponent,
+        HomeComponent,
+        ReferencesComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+    ],
     providers: [],
     bootstrap: [AppComponent],
 })
