@@ -4,7 +4,12 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Express' });
+    const locale = req.headers['accept-language'];
+    res.render('index', {
+        title: 'Express',
+        locale,
+    });
+
     next();
 });
 
