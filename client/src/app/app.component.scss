@@ -4,3 +4,11 @@
 .logout {
     font-size: 40px;
 }
+.navbar-default .navbar-nav > li > p, .navbar-default .navbar-nav {
+    color: #efefef;
+    cursor: pointer;
+}
+.navbar-default .navbar-nav > li > p:hover {
+    color: #ffd500;
+    cursor: pointer;
+}

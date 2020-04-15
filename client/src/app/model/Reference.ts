@@ -1,13 +1,13 @@
-export class Referens {
-    id: number;
-    title: string;
-    icon: string;
-    name: string;
+import { Point } from './Point';
 
-    constructor(id: number, title: string, icon: string, name: string) {
-        this.id = id;
+export class Referens {
+    sortNum: number;
+    title: object;
+    ref: Point[];
+
+    constructor(sortNum: number, title: object, ref: Point[]) {
+        this.sortNum = sortNum;
         this.title = title;
-        this.icon = icon;
-        this.name = name;
+        this.ref = ref;
     }
 }
