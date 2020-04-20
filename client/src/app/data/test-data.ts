@@ -1,7 +1,30 @@
 import { Referens } from '../model/Reference';
 import { Point } from '../model/Point';
+import { Feed } from '../model/Feed';
 
 export class TestData {
+    static feeds: Feed[] = [
+        {
+            href: 'innov',
+            title: { ru: 'Инновации', en: 'Innovations' },
+            newBlocks: 2,
+        },
+        {
+            href: 'inform',
+            title: { ru: 'Информация', en: 'Informations' },
+            newBlocks: 3,
+        },
+        {
+            href: 'votes',
+            title: { ru: 'Голосования', en: 'Votes' },
+            newBlocks: 5,
+        },
+        {
+            href: 'tenders',
+            title: { ru: 'Тендеры', en: 'Tenders' },
+            newBlocks: 7,
+        },
+    ];
     static points: Point[] = [
         {
             icon: 'map-icon.png',

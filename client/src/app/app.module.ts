@@ -15,6 +15,10 @@ import { HomeComponent } from './views/home/home.component';
 import { ReferencesComponent } from './views/references/references.component';
 import { TimelineNewsFeedsComponent } from './views/timeline-news-feeds/timeline-news-feeds.component';
 import { InformationsComponent } from './views/informations/informations.component';
+import { TimelineFeedInnovComponent } from './views/timeline-news-feeds/timeline-feed-innov/timeline-feed-innov.component';
+import { TimelineFeedInformComponent } from './views/timeline-news-feeds/timeline-feed-inform/timeline-feed-inform.component';
+import { TimelineFeedVotesComponent } from './views/timeline-news-feeds/timeline-feed-votes/timeline-feed-votes.component';
+import { TimelineFeedTendersComponent } from './views/timeline-news-feeds/timeline-feed-tenders/timeline-feed-tenders.component';
 
 @NgModule({
     declarations: [
@@ -26,6 +30,10 @@ import { InformationsComponent } from './views/informations/informations.compone
         ReferencesComponent,
         TimelineNewsFeedsComponent,
         InformationsComponent,
+        TimelineFeedInnovComponent,
+        TimelineFeedInformComponent,
+        TimelineFeedVotesComponent,
+        TimelineFeedTendersComponent,
     ],
     imports: [
         BrowserModule,

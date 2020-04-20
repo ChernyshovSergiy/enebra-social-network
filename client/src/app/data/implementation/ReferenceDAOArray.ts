@@ -1,6 +1,7 @@
 import { ReferenceDAO } from '../interface/ReferenceDAO';
 import { Observable, of } from 'rxjs';
 import { Referens } from '../../model/Reference';
+import { ReferenceView } from '../../model/ReferenceView';
 import { TestData } from '../test-data';
 
 export class ReferenceDAOArray implements ReferenceDAO {
@@ -24,7 +25,7 @@ export class ReferenceDAOArray implements ReferenceDAO {
         return undefined;
     }
 
-    getAllByLang(lang: string): Observable<Referens[]> {
+    getAllByLang(lang: string): Observable<ReferenceView[]> {
         return undefined;
     }
 }
