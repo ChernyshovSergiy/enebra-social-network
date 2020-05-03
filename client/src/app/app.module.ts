@@ -5,20 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { Select2Module } from 'ng-select2-component';
 
 import { AppComponent } from './app.component';
 
-import { RegisterComponent } from './views/register/register.component';
+import { RegisterComponent } from './views/auth/register/register.component';
 import { ProfileComponent } from './views/profile/profile.component';
-import { LoginComponent } from './views/login/login.component';
-import { HomeComponent } from './views/home/home.component';
-import { ReferencesComponent } from './views/references/references.component';
-import { TimelineNewsFeedsComponent } from './views/timeline-news-feeds/timeline-news-feeds.component';
-import { InformationsComponent } from './views/informations/informations.component';
-import { TimelineFeedInnovComponent } from './views/timeline-news-feeds/timeline-feed-innov/timeline-feed-innov.component';
-import { TimelineFeedInformComponent } from './views/timeline-news-feeds/timeline-feed-inform/timeline-feed-inform.component';
-import { TimelineFeedVotesComponent } from './views/timeline-news-feeds/timeline-feed-votes/timeline-feed-votes.component';
-import { TimelineFeedTendersComponent } from './views/timeline-news-feeds/timeline-feed-tenders/timeline-feed-tenders.component';
+import { LoginComponent } from './views/auth/login/login.component';
+import { HomeComponent } from './views/main/home.component';
+import { ReferencesComponent } from './views/main/references/references.component';
+import { TimelineNewsFeedsComponent } from './views/main/timeline-news-feeds/timeline-news-feeds.component';
+import { InformationsComponent } from './views/main/informations/informations.component';
+import { TimelineFeedInnovComponent } from './views/main/timeline-news-feeds/timeline-feed-innov/timeline-feed-innov.component';
+import { TimelineFeedInformComponent } from './views/main/timeline-news-feeds/timeline-feed-inform/timeline-feed-inform.component';
+import { TimelineFeedVotesComponent } from './views/main/timeline-news-feeds/timeline-feed-votes/timeline-feed-votes.component';
+import { TimelineFeedTendersComponent } from './views/main/timeline-news-feeds/timeline-feed-tenders/timeline-feed-tenders.component';
+import { MessagesComponent } from './views/navigation/messages/messages.component';
 
 @NgModule({
     declarations: [
@@ -34,6 +36,7 @@ import { TimelineFeedTendersComponent } from './views/timeline-news-feeds/timeli
         TimelineFeedInformComponent,
         TimelineFeedVotesComponent,
         TimelineFeedTendersComponent,
+        MessagesComponent,
     ],
     imports: [
         BrowserModule,
@@ -41,6 +44,7 @@ import { TimelineFeedTendersComponent } from './views/timeline-news-feeds/timeli
         FormsModule,
         HttpClientModule,
         BrowserAnimationsModule,
+        Select2Module,
     ],
     providers: [],
     bootstrap: [AppComponent],

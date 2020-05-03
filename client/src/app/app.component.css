@@ -1,5 +1,5 @@
 .login {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .logout {
@@ -14,6 +14,13 @@
 .navbar-default .navbar-nav > li > p:hover {
   color: #ffd500;
   cursor: pointer;
+}
+
+.lang-menu {
+  color: #2d4854;
+  text-align: center;
+  font-weight: bold;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=app.component.css.map */

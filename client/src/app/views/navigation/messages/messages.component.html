@@ -1,0 +1,53 @@
+<div class="dropdown headdrop messages open">
+    <div class="img-wrap" data-toggle="dropdown">
+        <img class="img-responsive" src="../assets/img/sms.png"/>
+    </div>
+    <div class="num">3</div>
+    <div class="dropdown-menu  dropdown-menu-right">
+        <div class="headdrop-head"><span class="rmed">Сообщение</span>
+            <div>Отметить все как прочитанные
+                <a class="new_message">Новое сообщение</a>
+            </div>
+        </div>
+        <ul class="list-unstyled headdrop-items">
+            <li *ngFor="let message of messages">
+                <div>
+                    <div class="user_wrap_image">
+                        <img [src]="'../assets/img/'+ message.avatar" alt="user_avatar"/>
+                    </div>
+                    <div class="headdropcont">
+                        <div class="headdroptop">
+                            <span class="rmed">
+                                {{message.fullName}}
+                            </span>
+                            <div class="mdate">
+                                {{message.date | date: "medium"}}
+                            </div>
+                        </div>
+                        <div class="headdropbot">
+                            <span class="chmess"></span>
+                            <div class="headdrop-txt" *ngIf="!message.guarantyQuery && message.myMsgLast">
+                                {{message.mySelf}}: {{message.msg}}
+                            </div>
+                            <div class="headdrop-txt" *ngIf="!message.guarantyQuery && !message.myMsgLast">
+                                {{message.msg}}
+                            </div>
+                            <div *ngIf="message.guarantyQuery">
+                                Запрос гарантии:
+                                <a class="save_button">
+                                    {{message.firstBtnTitle}}
+                                </a>
+                                <a class="whbut">
+                                    {{message.lastBtnTitle}}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="text-center headdrop_bot_href">
+            <div><a class="rmed">Просмотреть все сообщения</a></div>
+        </div>
+    </div>
+</div>

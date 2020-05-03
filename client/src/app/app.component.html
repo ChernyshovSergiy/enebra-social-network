@@ -76,70 +76,7 @@
                     </div>
                     <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs" *ngIf="auth.isLoggedIn()">
                         <li>
-                            <div class="dropdown headdrop messages ">
-                                <div class="img-wrap" data-toggle="dropdown">
-                                    <img class="img-responsive" src="../assets/img/sms.png"/>
-                                </div>
-                                <div class="num">3</div>
-                                <div class="dropdown-menu  dropdown-menu-right">
-                                    <div class="headdrop-head"><span class="rmed">Сообщение</span>
-                                        <div>Отметить все как прочитанные <a class="new_message">Новое сообщение</a>
-                                        </div>
-                                    </div>
-                                    <ul class="list-unstyled headdrop-items">
-                                        <li>
-                                            <div>
-                                                <div class="user_wrap_image">
-                                                    <img src="../assets/img/user.png" alt="user_avatar"/>
-                                                </div>
-                                                <div class="headdropcont">
-                                                    <div class="headdroptop"><span class="rmed">Андрей Голубев</span>
-                                                        <div class="mdate">02 сентября</div>
-                                                    </div>
-                                                    <div class="headdropbot"><span class="chmess"></span>
-                                                        <div class="headdrop-txt">Вы: да</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <div class="user_wrap_image">
-                                                    <img src="../assets/img/user.png"/>
-                                                </div>
-                                                <div class="headdropcont">
-                                                    <div class="headdroptop"><span class="rmed">Андрей Голубев</span>
-                                                        <div class="mdate">02 сентября</div>
-                                                    </div>
-                                                    <div class="headdropbot"><span class="chmess"></span>Запрос
-                                                        гарантии: <a class="save_button">подтвердить</a> <a
-                                                            class="whbut">отклонить</a></div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div>
-                                                <div class="user_wrap_image">
-                                                    <img src="../assets/img/user.png"/>
-                                                </div>
-                                                <div class="headdropcont">
-                                                    <div class="headdroptop"><span class="rmed">Андрей Голубев</span>
-                                                        <div class="mdate">02 сентября</div>
-                                                    </div>
-                                                    <div class="headdropbot"><span class="chmess"></span>
-                                                        <div class="headdrop-txt">Возможно Вас заинтересует моя
-                                                            инновация, я хотел лта лотл лвмлыо ыыышр шыуаыгшрыга лаафог
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="text-center headdrop_bot_href">
-                                        <div><a class="rmed">Просмотреть все сообщения</a></div>
-                                    </div>
-                                </div>
-                            </div>
+                            <app-messages></app-messages>
                         </li>
                         <li>
                             <div class="dropdown headdrop notes">
@@ -197,8 +134,21 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="user" *ngIf="auth.isLoggedIn()"><a class="logout glyphicon glyphicon-off"
-                                                                      routerLink="#" (click)="auth.logout()"></a></li>
+                        <li class="user" *ngIf="auth.isLoggedIn()">
+                            <a class="logout glyphicon glyphicon-off"
+                               routerLink="#" (click)="auth.logout()">
+                            </a>
+                        </li>
+                        <li class="lang-menu">
+                            <label>
+                                <select>
+                                    <option *ngFor="let lang of langs" [value]="lang.codeLang">
+                                        <img [src]="'../assets/img/flags_svg/'+lang.flagId+'.svg'" [alt]="lang.codeLang">
+                                        {{lang.langName}}
+                                    </option>
+                                </select>
+                            </label>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs login" *ngIf="!auth.isLoggedIn()">
                         <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>

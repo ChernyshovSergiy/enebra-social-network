@@ -1,8 +1,80 @@
 import { Referens } from '../model/Reference';
 import { Point } from '../model/Point';
 import { Feed } from '../model/Feed';
+import { LangMenu } from '../model/LangMenu';
+import { Message } from '../model/Message';
 
 export class TestData {
+    static messages: Message[] = [
+        {
+            avatar: 'user.png',
+            fullName: 'Андрей Голубев',
+            date: new Date('2020-05-03'),
+            guarantyQuery: false,
+            myMsgLast: true,
+            mySelf: 'Вы',
+            msg: 'Да',
+        },
+        {
+            avatar: 'user.png',
+            fullName: 'Сергей Чернышов',
+            date: new Date('2020-05-02'),
+            guarantyQuery: true,
+            firstBtnTitle: 'подтвердить',
+            lastBtnTitle: 'отклонить',
+        },
+        {
+            avatar: 'user.png',
+            fullName: 'Наталья Виниченко',
+            date: new Date('2020-05-01'),
+            guarantyQuery: false,
+            myMsgLast: false,
+            msg:
+                'Возможно Вас заинтересует моя инновация, я хотел лта лотл лвмлыо ыыышр шыуаыгшрыга лаафог',
+        },
+    ];
+    static langs: LangMenu[] = [
+        {
+            active: true,
+            flagId: 'gb',
+            codeLang: 'en',
+            langName: 'English',
+            ISOLang: 'en-GB',
+            langFiles: 'en-GB.js',
+        },
+        {
+            active: true,
+            flagId: 'ru',
+            codeLang: 'ru',
+            langName: 'Русский',
+            ISOLang: 'ru-RU',
+            langFiles: 'ru-RU.js',
+        },
+        {
+            active: false,
+            flagId: 'es',
+            codeLang: 'es',
+            langName: 'Español',
+            ISOLang: 'es-ES',
+            langFiles: 'es-ES.js',
+        },
+        {
+            active: false,
+            flagId: 'ua',
+            codeLang: 'ua',
+            langName: 'Український',
+            ISOLang: 'uk-UA',
+            langFiles: 'uk-UA.js',
+        },
+        {
+            active: false,
+            flagId: 'de',
+            codeLang: 'de',
+            langName: 'Deutsch',
+            ISOLang: 'de-DE',
+            langFiles: 'de-DE.js',
+        },
+    ];
     static feeds: Feed[] = [
         {
             href: 'innov',

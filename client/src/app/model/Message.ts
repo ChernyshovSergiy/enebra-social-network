@@ -1,0 +1,33 @@
+export class Message {
+    avatar: string;
+    fullName: string;
+    date: Date;
+    guarantyQuery: boolean;
+    myMsgLast?: boolean;
+    firstBtnTitle?: string;
+    lastBtnTitle?: string;
+    mySelf?: string;
+    msg?: string;
+
+    constructor(
+        avatar: string,
+        fullName: string,
+        date: Date,
+        guarantyQuery: boolean,
+        myMsgLast?: boolean,
+        firstBtnTitle?: string,
+        lastBtnTitle?: string,
+        mySelf?: string,
+        msg?: string,
+    ) {
+        this.avatar = avatar;
+        this.fullName = fullName;
+        this.date = date;
+        this.guarantyQuery = guarantyQuery;
+        this.myMsgLast = myMsgLast;
+        this.firstBtnTitle = firstBtnTitle;
+        this.lastBtnTitle = lastBtnTitle;
+        this.mySelf = mySelf;
+        this.msg = msg;
+    }
+}

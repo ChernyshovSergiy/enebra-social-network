@@ -1,5 +1,5 @@
 .login {
-    font-size: 24px;
+    font-size: 20px;
 }
 .logout {
     font-size: 40px;
@@ -11,4 +11,11 @@
 .navbar-default .navbar-nav > li > p:hover {
     color: #ffd500;
     cursor: pointer;
+}
+.lang-menu {
+    //position: absolute;
+    color: #2d4854;
+    text-align:center;
+    font-weight:bold;
+    z-index: 100;
 }
