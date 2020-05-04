@@ -12,7 +12,6 @@ export class MessagesComponent implements OnInit {
     constructor(private dataHandler: DataHandlerService) {}
 
     ngOnInit(): void {
-        this.messages = this.dataHandler.getMessages();
-        console.log(this.messages);
+        this.dataHandler.msgSubject.subscribe((messages) => (this.messages = messages));
     }
 }

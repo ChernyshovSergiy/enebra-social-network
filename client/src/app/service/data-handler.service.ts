@@ -14,6 +14,7 @@ import { Message } from '../model/Message';
 export class DataHandlerService {
     langsSubject = new Subject<LangMenu[]>();
     feedSubject = new BehaviorSubject<Feed[]>(TestData.feeds);
+    msgSubject = new BehaviorSubject<Message[]>(TestData.messages);
     constructor(private http: HttpClient) {}
 
     getReferences(lang: string): Observable<Referens> {
@@ -25,8 +26,5 @@ export class DataHandlerService {
     }
     getActiveLanguage(): LangMenu[] {
         return TestData.langs.filter((lang: LangMenu) => lang.active === true);
-    }
-    getMessages(): Message[] {
-        return TestData.messages;
     }
 }

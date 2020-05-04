@@ -25,7 +25,7 @@
                             </div>
                         </div>
                         <div class="headdropbot">
-                            <span class="chmess"></span>
+                            <span class="chmess" *ngIf="!message.newMsg"></span>
                             <div class="headdrop-txt" *ngIf="!message.guarantyQuery && message.myMsgLast">
                                 {{message.mySelf}}: {{message.msg}}
                             </div>

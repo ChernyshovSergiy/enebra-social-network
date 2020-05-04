@@ -11,6 +11,7 @@ export class TestData {
             fullName: 'Андрей Голубев',
             date: new Date('2020-05-03'),
             guarantyQuery: false,
+            newMsg: false,
             myMsgLast: true,
             mySelf: 'Вы',
             msg: 'Да',
@@ -20,6 +21,7 @@ export class TestData {
             fullName: 'Сергей Чернышов',
             date: new Date('2020-05-02'),
             guarantyQuery: true,
+            newMsg: false,
             firstBtnTitle: 'подтвердить',
             lastBtnTitle: 'отклонить',
         },
@@ -28,6 +30,7 @@ export class TestData {
             fullName: 'Наталья Виниченко',
             date: new Date('2020-05-01'),
             guarantyQuery: false,
+            newMsg: false,
             myMsgLast: false,
             msg:
                 'Возможно Вас заинтересует моя инновация, я хотел лта лотл лвмлыо ыыышр шыуаыгшрыга лаафог',

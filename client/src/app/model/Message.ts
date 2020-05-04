@@ -3,6 +3,7 @@ export class Message {
     fullName: string;
     date: Date;
     guarantyQuery: boolean;
+    newMsg: boolean;
     myMsgLast?: boolean;
     firstBtnTitle?: string;
     lastBtnTitle?: string;
@@ -14,6 +15,7 @@ export class Message {
         fullName: string,
         date: Date,
         guarantyQuery: boolean,
+        newMsg: boolean,
         myMsgLast?: boolean,
         firstBtnTitle?: string,
         lastBtnTitle?: string,
@@ -24,6 +26,7 @@ export class Message {
         this.fullName = fullName;
         this.date = date;
         this.guarantyQuery = guarantyQuery;
+        this.newMsg = newMsg;
         this.myMsgLast = myMsgLast;
         this.firstBtnTitle = firstBtnTitle;
         this.lastBtnTitle = lastBtnTitle;
