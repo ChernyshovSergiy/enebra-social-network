@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Select2Module } from 'ng-select2-component';
 import { ClickOutsideDirective } from './directive/click-outside.directive';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 
@@ -22,6 +23,7 @@ import { TimelineFeedInformComponent } from './views/main/timeline-news-feeds/ti
 import { TimelineFeedVotesComponent } from './views/main/timeline-news-feeds/timeline-feed-votes/timeline-feed-votes.component';
 import { TimelineFeedTendersComponent } from './views/main/timeline-news-feeds/timeline-feed-tenders/timeline-feed-tenders.component';
 import { MessagesComponent } from './views/navigation/messages/messages.component';
+import { NotificationsComponent } from './views/navigation/notifications/notifications.component';
 
 @NgModule({
     declarations: [
@@ -39,6 +41,7 @@ import { MessagesComponent } from './views/navigation/messages/messages.componen
         TimelineFeedTendersComponent,
         MessagesComponent,
         ClickOutsideDirective,
+        NotificationsComponent,
     ],
     imports: [
         BrowserModule,
@@ -47,6 +50,7 @@ import { MessagesComponent } from './views/navigation/messages/messages.componen
         HttpClientModule,
         BrowserAnimationsModule,
         Select2Module,
+        FlexLayoutModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

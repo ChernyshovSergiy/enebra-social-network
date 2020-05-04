@@ -1,0 +1,44 @@
+<div class="dropdown headdrop notes"
+     [class.open]="menu"
+     (appClickOutside)="ClickedOutside()"
+>
+    <div class="img-wrap" data-toggle="dropdown" (click)="showMenu()">
+        <img class="img-responsive" src="../assets/img/notif.png"/>
+        <div class="num">2</div>
+    </div>
+    <div class="dropdown-menu dropdown-menu-right">
+        <div class="headdrop-head"><span class="rmed">Уведомления</span>
+            <div>Отметить все как прочитанные</div>
+        </div>
+        <ul class="list-unstyled headdrop-items">
+            <li>
+                <div>
+                    <div class="user_wrap_image">
+                        <img src="../assets/img/user.png"/>
+                    </div>
+                    <div class="headdropcont">
+                        <div class="headdroptop"><span class="rmed">Андрей Голубев</span>
+                            <div class="make_notes">Внесла <span
+                                class="rreg">дополнения</span> в инновацию
+                            </div>
+                        </div>
+                        <div class="headdropbot">
+                            <div class="headdrop-txt rlight text-center">«МЕТОДИКА ИЗУЧЕНИЯ
+                                ИНОСТРАННОГО ЯЗЫКА»
+                            </div>
+                            <div class="rlight note_date"><img class="img-responsive"
+                                                               src="../assets/img/icons/mini-cal.png"/>
+                                2 сентября 16:00
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="text-center headdrop_bot_href">
+            <div>
+                <a class="rmed">Просмотреть все Уведомления</a>
+            </div>
+        </div>
+    </div>
+</div>

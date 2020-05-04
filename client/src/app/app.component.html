@@ -1,22 +1,3 @@
-<!--<div class="navbar navbar-default">-->
-<!--    <div class="container">-->
-<!--        <div id="navbar-main">-->
-<!--            <ul class="nav navbar-nav">-->
-<!--                <li><a routerLink="/">Home</a></li>-->
-<!--            </ul>-->
-<!--            <ul class="nav navbar-nav navbar-right">-->
-<!--                <li *ngIf="!auth.isLoggedIn()"><a routerLink="/login">Sign in</a></li>-->
-<!--                <li *ngIf="auth.isLoggedIn()">-->
-<!--                    <a routerLink="/profile">{{ auth.getUserDetails()?.name }}</a>-->
-<!--                </li>-->
-<!--                <li *ngIf="auth.isLoggedIn()"><a routerLink="#" (click)="auth.logout()">Logout</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<router-outlet></router-outlet>-->
-
 <header>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -76,50 +57,10 @@
                     </div>
                     <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs" *ngIf="auth.isLoggedIn()">
                         <li>
-                            <app-messages></app-messages>
+                            <app-messages [deviceXs]="deviceXs"></app-messages>
                         </li>
                         <li>
-                            <div class="dropdown headdrop notes">
-                                <div class="img-wrap" data-toggle="dropdown">
-                                    <img class="img-responsive" src="../assets/img/notif.png"/>
-                                    <div class="num">2</div>
-                                </div>
-                                <div class="dropdown-menu dropdown-menu-right">
-                                    <div class="headdrop-head"><span class="rmed">Уведомления</span>
-                                        <div>Отметить все как прочитанные</div>
-                                    </div>
-                                    <ul class="list-unstyled headdrop-items">
-                                        <li>
-                                            <div>
-                                                <div class="user_wrap_image">
-                                                    <img src="../assets/img/user.png"/>
-                                                </div>
-                                                <div class="headdropcont">
-                                                    <div class="headdroptop"><span class="rmed">Андрей Голубев</span>
-                                                        <div class="make_notes">Внесла <span
-                                                            class="rreg">дополнения</span> в инновацию
-                                                        </div>
-                                                    </div>
-                                                    <div class="headdropbot">
-                                                        <div class="headdrop-txt rlight text-center">«МЕТОДИКА ИЗУЧЕНИЯ
-                                                            ИНОСТРАННОГО ЯЗЫКА»
-                                                        </div>
-                                                        <div class="rlight note_date"><img class="img-responsive"
-                                                                                           src="../assets/img/icons/mini-cal.png"/>
-                                                            2 сентября 16:00
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="text-center headdrop_bot_href">
-                                        <div>
-                                            <a class="rmed">Просмотреть все Уведомления</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <app-notifications></app-notifications>
                         </li>
                         <li>
                             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Голосования">

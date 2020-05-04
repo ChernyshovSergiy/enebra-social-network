@@ -9,6 +9,7 @@ export class Message {
     lastBtnTitle?: string;
     mySelf?: string;
     msg?: string;
+    state?: string;
 
     constructor(
         avatar: string,
@@ -21,6 +22,7 @@ export class Message {
         lastBtnTitle?: string,
         mySelf?: string,
         msg?: string,
+        state?: string,
     ) {
         this.avatar = avatar;
         this.fullName = fullName;
@@ -32,5 +34,6 @@ export class Message {
         this.lastBtnTitle = lastBtnTitle;
         this.mySelf = mySelf;
         this.msg = msg;
+        this.state = state;
     }
 }

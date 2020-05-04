@@ -19,15 +19,9 @@ export class TimelineFeedInformComponent implements OnInit {
 
     showMenu() {
         this.menu = !this.menu;
-        // if (this.window) {
-        //     this.window = !this.window;
-        // }
     }
     showDialog() {
         this.window = !this.window;
-        // if (this.menu) {
-        //     this.menu = !this.menu;
-        // }
     }
 
     ClickedOutsideMenu() {
