@@ -1,24 +1,25 @@
 <div class="block">
     <div class="dropdown top_drop"
-         (click)="showMenu()"
          [class.open]="menu"
+         (appClickOutside)="ClickedOutside()"
     >
         <i
             class="fa fa-chevron-down"
             data-toggle="dropdown"
             aria-hidden="true"
             aria-expanded="true"
+            (click)="showMenu()"
         ></i>
         <ul class="dropdown-menu dropdown-menu-right">
             <li>
-                <a href=""
-                ><i class="fa fa-times-circle" aria-hidden="true"></i>
+                <a class="pointer">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
                     <div>Отказаться от подписки<br />Инноваций Ольги</div>
                 </a>
             </li>
             <li>
-                <a href=""
-                ><i class="fa fa-times-circle" aria-hidden="true"></i>
+                <a class="pointer">
+                    <i class="fa fa-times-circle" aria-hidden="true"></i>
                     <div>Отказаться получать<br />Инновации Ольги</div>
                 </a>
             </li>

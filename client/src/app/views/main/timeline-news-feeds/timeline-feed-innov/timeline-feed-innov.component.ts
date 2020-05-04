@@ -18,4 +18,10 @@ export class TimelineFeedInnovComponent implements OnInit {
     showMenu() {
         this.menu = !this.menu;
     }
+
+    ClickedOutside() {
+        if (this.menu) {
+            this.menu = false;
+        }
+    }
 }
