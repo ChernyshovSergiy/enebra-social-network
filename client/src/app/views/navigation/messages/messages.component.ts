@@ -9,9 +9,20 @@ import { DataHandlerService } from '../../../service/data-handler.service';
 })
 export class MessagesComponent implements OnInit {
     messages: Message[];
-    constructor(private dataHandler: DataHandlerService) {}
+    menu: boolean;
+    constructor(private dataHandler: DataHandlerService) {
+        this.menu = false;
+    }
 
     ngOnInit(): void {
         this.dataHandler.msgSubject.subscribe((messages) => (this.messages = messages));
+    }
+    ClickedOutside() {
+        if (this.menu) {
+            this.menu = false;
+        }
+    }
+    showMenu() {
+        this.menu = !this.menu;
     }
 }

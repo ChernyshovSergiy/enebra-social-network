@@ -1,9 +1,14 @@
-<div class="dropdown headdrop messages open">
-    <div class="img-wrap" data-toggle="dropdown">
+<div class="dropdown headdrop messages"
+     [class.open]="menu"
+     (appClickOutside)="ClickedOutside()"
+>
+    <div class="img-wrap" data-toggle="dropdown" (click)="showMenu()">
         <img class="img-responsive" src="../assets/img/sms.png"/>
     </div>
     <div class="num">3</div>
-    <div class="dropdown-menu  dropdown-menu-right">
+    <div class="dropdown-menu  dropdown-menu-right"
+
+    >
         <div class="headdrop-head"><span class="rmed">Сообщение</span>
             <div>Отметить все как прочитанные
                 <a class="new_message">Новое сообщение</a>

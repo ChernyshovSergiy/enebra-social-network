@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Select2Module } from 'ng-select2-component';
+import { ClickOutsideDirective } from './directive/click-outside.directive';
 
 import { AppComponent } from './app.component';
 
@@ -37,6 +38,7 @@ import { MessagesComponent } from './views/navigation/messages/messages.componen
         TimelineFeedVotesComponent,
         TimelineFeedTendersComponent,
         MessagesComponent,
+        ClickOutsideDirective,
     ],
     imports: [
         BrowserModule,
