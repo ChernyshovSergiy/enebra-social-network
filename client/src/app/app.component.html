@@ -80,15 +80,17 @@
                                routerLink="#" (click)="auth.logout()">
                             </a>
                         </li>
-                        <li class="lang-menu">
+                        <li>
                             <label>
-                                <select>
+                                <select class="lang-menu" [(ngModel)]="selectLanguage" name="lang" (ngModelChange)="changeLang(selectLanguage)">
                                     <option *ngFor="let lang of langs" [value]="lang.codeLang">
-                                        <img [src]="'../assets/img/flags_svg/'+lang.flagId+'.svg'" [alt]="lang.codeLang">
+<!--                                            <img class="flag" [src]="'../assets/img/flags_svg/'+lang.flagId+'.svg'" [alt]="lang.codeLang">&ndash;&gt;-->
+<!--                                            <p *ngIf="langsList(lang.codeLang)">{{lang.langName}}</p>-->
                                         {{lang.langName}}
                                     </option>
                                 </select>
                             </label>
+                            <p> Lang: {{selectLanguage}} </p>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs login" *ngIf="!auth.isLoggedIn()">

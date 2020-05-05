@@ -9,6 +9,8 @@ import { Select2Module } from 'ng-select2-component';
 import { ClickOutsideDirective } from './directive/click-outside.directive';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+import { MatSelectModule } from '@angular/material/select';
+
 import { AppComponent } from './app.component';
 
 import { RegisterComponent } from './views/auth/register/register.component';
@@ -51,6 +53,7 @@ import { NotificationsComponent } from './views/navigation/notifications/notific
         BrowserAnimationsModule,
         Select2Module,
         FlexLayoutModule,
+        MatSelectModule,
     ],
     providers: [],
     bootstrap: [AppComponent],

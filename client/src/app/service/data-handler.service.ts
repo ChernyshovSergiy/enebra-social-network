@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, LOCALE_ID, Inject } from '@angular/core';
 import { Referens } from '../model/Reference';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -12,17 +12,23 @@ import { Message } from '../model/Message';
     providedIn: 'root',
 })
 export class DataHandlerService {
-    langsSubject = new Subject<LangMenu[]>();
+    langStart = 'ru';
+    currentLangSubject = new BehaviorSubject<string>(this.langStart);
     feedSubject = new BehaviorSubject<Feed[]>(TestData.feeds);
     msgSubject = new BehaviorSubject<Message[]>(TestData.messages);
-    constructor(private http: HttpClient) {}
 
-    getReferences(lang: string): Observable<Referens> {
-        return this.http.get<Referens>('/api/v1/referens/' + lang);
+    constructor(@Inject(LOCALE_ID) public locale: string, private http: HttpClient) {
+        // this.currentLangSubject.next(locale.split('-')[0]);
+        this.currentLangSubject.next(this.langStart);
+        // console.log();
     }
-    fillActiveLanguage() {
-        const langs = TestData.langs.filter((lang: LangMenu) => lang.active === true);
-        this.langsSubject.next(langs);
+
+    getReferences(): Referens[] {
+        return TestData.referens.sort((ref) => ref.sortNum);
+    }
+    fillCurrentLanguage(lang) {
+        // console.log('Current Lang: ', lang);
+        this.currentLangSubject.next(lang);
     }
     getActiveLanguage(): LangMenu[] {
         return TestData.langs.filter((lang: LangMenu) => lang.active === true);

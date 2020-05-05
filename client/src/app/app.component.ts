@@ -15,6 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
     langs: LangMenu[];
     mediaSub: Subscription;
     deviceXs: boolean;
+    selectLanguage: string;
     constructor(
         public auth: AuthenticationService,
         private dataHandler: DataHandlerService,
@@ -25,13 +26,21 @@ export class AppComponent implements OnInit, OnDestroy {
         this.mediaSub = this.mediaObserver.media$.subscribe((result: MediaChange) => {
             console.log(result.mqAlias);
             this.deviceXs = result.mqAlias === 'xs';
+            this.dataHandler.currentLangSubject.subscribe((lang) => (this.selectLanguage = lang));
         });
         // this.dataHandler.langsSubject.subscribe((langs: LangMenu[]) => (this.langs = langs));
         this.langs = this.dataHandler.getActiveLanguage();
-        console.log(this.langs);
+    }
+
+    langsList(lang): boolean {
+        return this.selectLanguage !== lang;
     }
 
     ngOnDestroy(): void {
         this.mediaSub.unsubscribe();
+    }
+
+    changeLang(selectLanguage: string) {
+        this.dataHandler.fillCurrentLanguage(selectLanguage);
     }
 }
