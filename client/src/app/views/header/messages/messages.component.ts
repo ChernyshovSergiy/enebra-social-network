@@ -43,4 +43,8 @@ export class MessagesComponent implements OnInit {
             message.state = 'orig';
         }, 300);
     }
+
+    openMessanger() {
+        this.dataHandler.showMessenger(true);
+    }
 }

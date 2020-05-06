@@ -13,6 +13,8 @@ import { Message } from '../model/Message';
 })
 export class DataHandlerService {
     langStart = 'ru';
+    messenger = false;
+    messengerSubject = new BehaviorSubject<boolean>(this.messenger);
     currentLangSubject = new BehaviorSubject<string>(this.langStart);
     feedSubject = new BehaviorSubject<Feed[]>(TestData.feeds);
     msgSubject = new BehaviorSubject<Message[]>(TestData.messages);
@@ -25,6 +27,13 @@ export class DataHandlerService {
 
     getReferences(): Referens[] {
         return TestData.referens.sort((ref) => ref.sortNum);
+    }
+    showMessenger(status: boolean) {
+        if (this.messenger !== status) {
+            this.messenger = status;
+            this.messengerSubject.next(status);
+            console.log('Messanger Status: ', status);
+        }
     }
     fillCurrentLanguage(lang) {
         // console.log('Current Lang: ', lang);

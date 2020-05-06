@@ -24,8 +24,10 @@ import { TimelineFeedInnovComponent } from './views/main/timeline-news-feeds/tim
 import { TimelineFeedInformComponent } from './views/main/timeline-news-feeds/timeline-feed-inform/timeline-feed-inform.component';
 import { TimelineFeedVotesComponent } from './views/main/timeline-news-feeds/timeline-feed-votes/timeline-feed-votes.component';
 import { TimelineFeedTendersComponent } from './views/main/timeline-news-feeds/timeline-feed-tenders/timeline-feed-tenders.component';
-import { MessagesComponent } from './views/navigation/messages/messages.component';
-import { NotificationsComponent } from './views/navigation/notifications/notifications.component';
+import { MessagesComponent } from './views/header/messages/messages.component';
+import { NotificationsComponent } from './views/header/notifications/notifications.component';
+import { HeaderComponent } from './views/header/header.component';
+import { MessangerComponent } from './views/messanger/messanger.component';
 
 @NgModule({
     declarations: [
@@ -44,6 +46,8 @@ import { NotificationsComponent } from './views/navigation/notifications/notific
         MessagesComponent,
         ClickOutsideDirective,
         NotificationsComponent,
+        HeaderComponent,
+        MessangerComponent,
     ],
     imports: [
         BrowserModule,

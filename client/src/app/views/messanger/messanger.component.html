@@ -1,0 +1,73 @@
+<div class="messanger" [style.display]="showMessanger===true?'block':'none'">
+    <div class="messanger_head">
+        <div class="swrap">
+            <input type="search" class="form-control messanger_search" />
+            <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+        <div class="dropdown"
+             [class.open]="showDialog"
+             (click)="openDialog()"
+             (appClickOutside)="ClickedOutside()"
+        >
+            <span class="messanger_icons settings" data-toggle="dropdown"></span>
+            <div class="dropdown-menu dropdown-menu-left">
+                <div class="rlight"><a class="pointer">Заблокировать сообщения...</a></div>
+            </div>
+        </div>
+        <span class="close_form close_messanger" (click)="closeMessanger()">×</span>
+    </div>
+    <div class="messanger_scroll">
+        <div class="messanger_content rlight">
+            <div class="list-unstyled">
+                <div class="messanger-sms">
+                    <div class="user_wrap_image">
+                        <a href=""><img src="../assets/img/user.png" /></a>
+                    </div>
+                    <div class="messanger-sms-txt">
+                        <a href="">
+                            <img src="../assets/img/mess.png" />
+                            Настольная книга переводчика
+                        </a>
+                    </div>
+                </div>
+                <div class="messanger-sms-answers">
+                    <div class="messanger-sms-txt">спс</div>
+                    <div class="prosmotreno"><span class="chmess"></span> Просмотрено 2 сентября</div>
+                </div>
+                <div class="messanger-sms">
+                    <div class="user_wrap_image">
+                        <a href=""><img src="../assets/img/user.png" /></a>
+                    </div>
+                    <div class="messanger-sms-txt">
+                        Настольная книга переводчика
+                    </div>
+                </div>
+                <div class="messanger-sms-answers">
+                    <div class="messanger-sms-txt">спс</div>
+                    <div class="prosmotreno"><span class="chmess"></span> Просмотрено 2 сентября</div>
+                </div>
+                <div class="messanger-sms">
+                    <div class="user_wrap_image">
+                        <a href=""><img src="../assets/img/user.png" /></a>
+                    </div>
+                    <div class="messanger-sms-txt">
+                        Настольная книга переводчика
+                    </div>
+                </div>
+                <div class="messanger-sms-answers">
+                    <div class="messanger-sms-txt">спс</div>
+                    <div class="prosmotreno"><span class="chmess"></span> Просмотрено 2 сентября</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="messanger_bottom">
+        <input type="text" class="form-control enter_message" placeholder="Введите сообщение..." />
+        <div class="messicowrap">
+            <a href=""><span class="messanger_icons imgico"></span></a>
+            <a href=""><span class="messanger_icons smile"></span></a>
+            <a href=""><span class="messanger_icons clip"></span></a>
+            <a href=""><span class="messanger_icons like"></span></a>
+        </div>
+    </div>
+</div>
