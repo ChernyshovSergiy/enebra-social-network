@@ -1,9 +1,9 @@
 <div class="col-md-6 col-sm-12 col-xs-12 social_mdm middle">
     <ul class="nav nav-pills pointer">
         <li
-            (click)="showSelectedFeed(feed)"
             *ngFor="let feed of feeds"
-            [class.active]="feed === selectedFeed"
+            (click)="showSelectedFeed(feed.href)"
+            [class.active]="feed.href === selectedFeed"
         >
             <a data-toggle="tab">
                 {{ feed.title[lang] ? feed.title[lang] : feed.title['en'] }}
@@ -12,26 +12,10 @@
         </li>
     </ul>
     <div class="tab-content clearfix">
-        <div
-            class="tab-pane innovation_tab"
-            id="innov"
-            [class.active]="selectedFeed.href === 'innov'"
-        >
-            <app-timeline-feed-innov></app-timeline-feed-innov>
-        </div>
-        <div
-            class="tab-pane inform_tab"
-            id="inform"
-            [class.active]="selectedFeed.href === 'inform'"
-        >
-            <app-timeline-feed-inform></app-timeline-feed-inform>
-        </div>
-        <div class="tab-pane" id="tenders" [class.active]="selectedFeed.href === 'tenders'">
-            <app-timeline-feed-tenders></app-timeline-feed-tenders>
-        </div>
-        <div class="tab-pane votes_tab" id="votes" [class.active]="selectedFeed.href === 'votes'">
-            <app-timeline-feed-votes [parentHref]="selectedFeed.href"></app-timeline-feed-votes>
-        </div>
+        <app-timeline-feed-innov *ngIf="selectedFeed === 'innov'"></app-timeline-feed-innov>
+        <app-timeline-feed-inform *ngIf="selectedFeed === 'inform'"></app-timeline-feed-inform>
+        <app-timeline-feed-votes *ngIf="selectedFeed === 'votes'"></app-timeline-feed-votes>
+        <app-timeline-feed-tenders *ngIf="selectedFeed === 'tenders'"></app-timeline-feed-tenders>
     </div>
     <div class="clearfix"></div>
 </div>

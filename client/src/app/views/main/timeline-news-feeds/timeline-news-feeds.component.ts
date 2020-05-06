@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Feed } from '../../../model/Feed';
 import { DataHandlerService } from '../../../service/data-handler.service';
 import { AuthenticationService } from '../../../service/authentication.service';
@@ -9,18 +9,19 @@ import { AuthenticationService } from '../../../service/authentication.service';
     styleUrls: ['./timeline-news-feeds.component.scss'],
 })
 export class TimelineNewsFeedsComponent implements OnInit {
+    selectedFeed: string;
     constructor(private DataHandler: DataHandlerService) {}
 
     lang: string;
     feeds: Feed[];
-    selectedFeed: Feed;
+    // selectedFeed: Feed;
 
     ngOnInit(): void {
         this.DataHandler.feedSubject.subscribe((feeds: Feed[]) => (this.feeds = feeds));
         this.DataHandler.currentLangSubject.subscribe((lang: string) => (this.lang = lang));
-        this.selectedFeed = this.feeds[0];
+        this.selectedFeed = 'innov';
     }
-    showSelectedFeed(feed: Feed): void {
+    showSelectedFeed(feed: string): void {
         this.selectedFeed = feed;
         // console.log(this.selectedFeed.href);
     }
