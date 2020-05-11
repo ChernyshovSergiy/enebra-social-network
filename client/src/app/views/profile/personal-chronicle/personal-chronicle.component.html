@@ -1,0 +1,35 @@
+<div class="clearfix uspage_cont">
+    <div class="tab-pane" id="chronic">
+        <div class="top-tab"><span class="uicon chronic"></span>Хроника</div>
+        <div class="tab-cont-block">
+            <ul class="nav nav-pills col-md-3 col-sm-12 col-xs-12 tab-cont_nav ">
+                <li
+                    routerLinkActive="active">
+                    <a routerLink="innovation-author" data-toggle="tab">
+                        <span class="chron_icons inauthmini"></span>Инновации (Автор)
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="innovation-co-author" data-toggle="tab">
+                        <span class="chron_icons incoauthmini"></span>Инновации (Соавтор)
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="information" data-toggle="tab">
+                        <span class="chron_icons infomini"></span>Информация
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="votes" data-toggle="tab">
+                        <span class="chron_icons votesmini"></span>Голосования
+                    </a>
+                </li>
+            </ul>
+            <div class="col-md-9 col-sm-12 col-xs-12 tab-content clearfix tab-cont-bl no-pad">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+

@@ -8,7 +8,7 @@
             <div class="h5">{{ reference.title[lang] }}</div>
             <div *ngFor="let ref of reference.ref">
                 <img class="iconz" [src]="'../assets/img/icons/'+ ref.icon" />
-                <a [href]="'/profile/'+ref.link">{{ref.name[lang]}}</a>
+                <a [routerLink]="'/profile/'+ref.link">{{ref.name[lang]}}</a>
             </div>
         </div>
     </div>

@@ -29,7 +29,6 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss",
               "src/assets/css/jquery-ui.css",
               "src/assets/css/bootstrap.css",
               "src/assets/css/font-awesome.min.css",

@@ -1,7 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Feed } from '../../../model/Feed';
 import { DataHandlerService } from '../../../service/data-handler.service';
-import { AuthenticationService } from '../../../service/authentication.service';
 
 @Component({
     selector: 'app-timeline-news-feeds',
@@ -14,7 +13,6 @@ export class TimelineNewsFeedsComponent implements OnInit {
 
     lang: string;
     feeds: Feed[];
-    // selectedFeed: Feed;
 
     ngOnInit(): void {
         this.DataHandler.feedSubject.subscribe((feeds: Feed[]) => (this.feeds = feeds));
@@ -23,6 +21,5 @@ export class TimelineNewsFeedsComponent implements OnInit {
     }
     showSelectedFeed(feed: string): void {
         this.selectedFeed = feed;
-        // console.log(this.selectedFeed.href);
     }
 }

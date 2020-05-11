@@ -28,6 +28,26 @@ import { MessagesComponent } from './views/header/messages/messages.component';
 import { NotificationsComponent } from './views/header/notifications/notifications.component';
 import { HeaderComponent } from './views/header/header.component';
 import { MessangerComponent } from './views/messanger/messanger.component';
+import { DropDownOpenDirective } from './directive/drop-down-open.directive';
+import { PersonalDataComponent } from './views/profile/personal-data/personal-data.component';
+import { PersonalChronicleComponent } from './views/profile/personal-chronicle/personal-chronicle.component';
+import { PersonalBalanceComponent } from './views/profile/personal-balance/personal-balance.component';
+import { PersonalTinelineSettingsComponent } from './views/profile/personal-tineline-settings/personal-tineline-settings.component';
+import { PersonalCreateInnovationComponent } from './views/profile/personal-create-innovation/personal-create-innovation.component';
+import { PersonalCreateInformationComponent } from './views/profile/personal-create-information/personal-create-information.component';
+import { PersonalBlockchainComponent } from './views/profile/personal-blockchain/personal-blockchain.component';
+import { InnovationAuthorComponent } from './views/profile/personal-chronicle/innovation-author/innovation-author.component';
+import { InnovationCoAuthorComponent } from './views/profile/personal-chronicle/innovation-co-author/innovation-co-author.component';
+import { InformationComponent } from './views/profile/personal-chronicle/information/information.component';
+import { VotesComponent } from './views/profile/personal-chronicle/votes/votes.component';
+import { DataComponent } from './views/profile/personal-data/data/data.component';
+import { ContactComponent } from './views/profile/personal-data/contact/contact.component';
+import { OwnershipComponent } from './views/profile/personal-data/ownership/ownership.component';
+import { HierarchyOfNeedsComponent } from './views/profile/personal-data/hierarchy-of-needs/hierarchy-of-needs.component';
+import { ServerComponent } from './views/profile/personal-data/server/server.component';
+import { FamilyComponent } from './views/profile/personal-data/data/family/family.component';
+import { GuarantorsComponent } from './views/profile/personal-data/data/guarantors/guarantors.component';
+import { CitizenshipComponent } from './views/profile/personal-data/data/citizenship/citizenship.component';
 
 @NgModule({
     declarations: [
@@ -48,6 +68,26 @@ import { MessangerComponent } from './views/messanger/messanger.component';
         NotificationsComponent,
         HeaderComponent,
         MessangerComponent,
+        DropDownOpenDirective,
+        PersonalDataComponent,
+        PersonalChronicleComponent,
+        PersonalBalanceComponent,
+        PersonalTinelineSettingsComponent,
+        PersonalCreateInnovationComponent,
+        PersonalCreateInformationComponent,
+        PersonalBlockchainComponent,
+        InnovationAuthorComponent,
+        InnovationCoAuthorComponent,
+        InformationComponent,
+        VotesComponent,
+        DataComponent,
+        ContactComponent,
+        OwnershipComponent,
+        HierarchyOfNeedsComponent,
+        ServerComponent,
+        FamilyComponent,
+        GuarantorsComponent,
+        CitizenshipComponent,
     ],
     imports: [
         BrowserModule,

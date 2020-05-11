@@ -104,27 +104,27 @@ export class TestData {
         {
             icon: 'map-icon.png',
             name: { en: 'my balance', ru: 'мой баланс' },
-            link: 'profile-balance',
+            link: 'balance',
         },
         {
             icon: 'edit.png',
             name: { en: 'edit profile', ru: 'редактировать профиль' },
-            link: 'edit-profile',
+            link: 'personal-data/main/family',
         },
         {
             icon: 'set.png',
             name: { en: 'timeline setup', ru: 'настройка ленты' },
-            link: 'timeline-setup',
+            link: 'timeline-settings',
         },
         {
             icon: 'edit.png',
             name: { en: 'information', ru: 'информацию' },
-            link: 'information',
+            link: 'create-information',
         },
         {
             icon: 'set.png',
             name: { en: 'innovation', ru: 'инновацию' },
-            link: 'innovation',
+            link: 'create-innovation',
         },
         {
             icon: 'edit.png',

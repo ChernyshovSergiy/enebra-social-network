@@ -1,0 +1,121 @@
+<div class="clearfix uspage_cont">
+    <div class="personal_data" id="persdata">
+        <div class="top-tab"><span class="uicon pers"></span>Личные данные</div>
+        <div class="tab-cont-block">
+            <ul class="nav nav-pills col-md-3 col-xs-12 tab-cont_nav ">
+                <li routerLinkActive="active">
+                    <a routerLink="main/family" data-toggle="tab">
+                        <span class="nav_icons data"></span>Основные данные
+                    </a>
+                </li>
+                <li  routerLinkActive="active">
+                    <a routerLink="contact" data-toggle="tab">
+                        <span class="nav_icons contact"></span>Контактная инф-ция
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="ownership" data-toggle="tab">
+                        <span class="nav_icons sobstv"></span>Собственность
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="hierarchy-of-needs" data-toggle="tab">
+                        <span class="nav_icons potrebnost"></span>Иерархия потребностей
+                    </a>
+                </li>
+                <li routerLinkActive="active">
+                    <a routerLink="server" data-toggle="tab">
+                        <span class="nav_icons server"></span>Сервер
+                    </a>
+                </li>
+            </ul>
+            <div class="col-md-9 col-xs-12 tab-content clearfix tab-cont-bl no-pad">
+                <router-outlet></router-outlet>
+            </div>
+            <div class="potrebnost_info bl_bot col-xs-12 no-pad potr_show">
+                <div class="col-xs-12 text-center p_inf_title">Создать новую, заменить или дополнить список потребностей</div>
+                <div class="col-md-4 col-sm-4 col-xs-12 choose_potrebn">
+                    <div class="form-group row">
+                        <div class="ch_p_title text-center">Выбрать основную потребность:</div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 no-pad inplab">
+                            <input type="radio" name="osn_potr" class="" id="potr1" checked />
+                            <label for="potr1"></label>
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-10 pad-left">
+                            <select class="select">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="ch_p_title text-center">Создать основную потребность:</div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 no-pad inplab">
+                            <input type="radio" name="osn_potr" class="" id="potr2" />
+                            <label for="potr2"></label>
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-10 pad-left">
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 choose_potrebn">
+                    <div class="form-group row">
+                        <div class="ch_p_title text-center">Выбрать потребность 1-го уровня:</div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 no-pad inplab">
+                            <input type="radio" name="potr_2" class="" id="potr3" checked />
+                            <label for="potr3"></label>
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-10 pad-left">
+                            <select class="select">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="ch_p_title text-center">Создать потребность 1-го уровня:</div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 no-pad inplab">
+                            <input type="radio" name="potr_2" class="" id="potr4" />
+                            <label for="potr4"></label>
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-10 pad-left">
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 choose_potrebn">
+                    <div class="form-group row">
+                        <div class="ch_p_title text-center">Выбрать потребность 2-го уровня:</div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 no-pad inplab">
+                            <input type="radio" name="potr_3" class="" id="potr5" checked />
+                            <label for="potr5"></label>
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-10 pad-left">
+                            <select class="select">
+                                <option></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="ch_p_title text-center">Создать потребность 2-го уровня:</div>
+                        <div class="col-md-2 col-sm-2 col-xs-2 no-pad inplab">
+                            <input type="radio" name="potr_3" class="" id="potr6" />
+                            <label for="potr6"></label>
+                        </div>
+                        <div class="col-md-10 col-sm-10 col-xs-10 pad-left">
+                            <input type="text" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 text-center p_inf_title">Написать обоснование к желаемым изменениям, дополнениям:</div>
+                <div class="col-xs-12 user_textarea_bl">
+                    <textarea class="user_textarea"></textarea>
+                    <div class="bt_group btn_bottom flright lentabutton">
+                        <button class="save_button" type="">пред просмотр</button>
+                        <button class="save_button" type="">опубликовать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
